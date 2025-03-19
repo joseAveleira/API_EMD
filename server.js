@@ -10,17 +10,17 @@ const port = 3000;
 
 // Conectar a la base de datos
 connectDB();
-
+//comentario de prueba
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
-// Rutas
+// Rutas de la API
 app.use('/sensors', sensorRoutes);
 app.use('/readings', readingRoutes);
 
-// Ruta de prueba
+
 app.get('/test', (req, res) => res.json({ msg: 'El API REST funciona!' }));
 
 // Iniciar servidor
