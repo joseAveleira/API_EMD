@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -6,7 +7,7 @@ const sensorRoutes = require('./routes/sensors.routes');
 const readingRoutes = require('./routes/readings.routes');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Conectar a la base de datos
 connectDB();
